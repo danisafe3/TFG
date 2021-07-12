@@ -27,12 +27,12 @@ cmd_messages = { "model_load":"---\n OPERATION: Model successfully loaded.\n---\
 				 }
 
 
-
+# Resets the status to "waiting"
 def status_reset():
 	status_label["text"]=status_waiting
 
 
-
+# Sends error message and terminates the operation
 def error_and_reset(cmd_text=cmd_messages["other_error"], msgbox_title="OTHER ERROR", msgbox_text="Some error happened."):
 	messagebox.showerror(msgbox_title, msgbox_text)
 	sys.stdout.write(cmd_text)
